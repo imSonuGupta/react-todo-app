@@ -14,7 +14,7 @@ const TodoItems = ({item, onDelete , onComplete, onInComplete}: TodoItemProps) =
     return (
         <div className='flex items-center gap-2'>
             <Checkbox checked={item.completed} onCheckedChange={(checked) => handleComplete(checked, item.id)}/>
-            <p className={item.completed ? 'line-through': ''}>{item.task}</p>
+            <p className={item.completed ? 'line-through': ''}>{item.title}</p>
             {item.completed && <MdDelete className='text-red-500' onClick={() => onDelete ? onDelete(item.id): null} />}
         </div>
     );

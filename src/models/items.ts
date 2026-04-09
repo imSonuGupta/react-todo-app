@@ -1,5 +1,6 @@
 export interface Item {
-    task: string;
+    title: string;
     completed: boolean;
     id: string;
+    userId?: string;
 }
