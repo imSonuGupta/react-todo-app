@@ -1,13 +1,14 @@
 import { Checkbox } from './ui/checkbox';
 import { MdDelete } from "react-icons/md";
-const TodoItems = ({item, onDelete , onComplete, onInComplete}) => {
+import type { TodoItemProps } from '../models/todoItemProps';
+
+const TodoItems = ({item, onDelete , onComplete, onInComplete}: TodoItemProps) => {
     const handleComplete = (checked: any, id: string) => {
         if (checked) {
             onComplete(id);
         } else {
             onInComplete(id);
         }
-        console.log(id);
     }
     
     return (
